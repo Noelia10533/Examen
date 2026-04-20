@@ -1,5 +1,3 @@
-from personajes.jugador_juego import jugador_del_juego
-from personajes.jugador_partida import gestorPartida
 
 def AccionNocturna(self, objetivo=None):  
     if not self.esta_vivo:
@@ -26,11 +24,11 @@ def VotacionDia(self, NombreVotado):
 
 def ComprobarVictoria(self):  
     
-    list = sum(1 for j in self.jugadores if j.rol == "lobo" and j.esta_vivo)
-    dict = sum(1 for j in self.jugadores if j.rol != "lobo" and j.esta_vivo)
+    lobos_vivos = sum(1 for j in self.jugadores if j.rol == "lobo" and j.esta_vivo)
+    aldeanos_vivos = sum(1 for j in self.jugadores if j.rol != "lobo" and j.esta_vivo)
     
-    if list >= dict:
+    if lobos_vivos >= aldeanos_vivos:
         return "¡Victoria de los Lobos!"
-    elif list ==0:
+    elif lobos_vivos ==0:
         return "¡Victoria de los Aldeanos!"
     return "La partida debe continuar..."

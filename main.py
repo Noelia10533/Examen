@@ -1,11 +1,9 @@
-import os  
-import sys
+
 
 from lógica.metodos import AccionNocturna
 from lógica.metodos import VotacionDia
 from lógica.metodos import ComprobarVictoria
 from personajes.jugador_partida import gestorPartida
-from personajes.jugador_juego import jugador_del_juego
 
 
 juego=gestorPartida()
