@@ -1,5 +1,3 @@
-
-
 from lógica.metodos import AccionNocturna
 from lógica.metodos import VotacionDia
 from lógica.metodos import ComprobarVictoria
@@ -7,7 +5,7 @@ from personajes.jugador_partida import gestorPartida
 
 
 juego=gestorPartida()
-accion = AccionNocturna()
+accion = AccionNocturna('María')
 votacion = VotacionDia()
 victoria = ComprobarVictoria()
 
