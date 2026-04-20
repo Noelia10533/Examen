@@ -1,0 +1,2 @@
+from personajes.jugador_juego import jugador_del_juego
+from personajes.jugador_partida import gestorPartida
